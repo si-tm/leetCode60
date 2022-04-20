@@ -33,3 +33,16 @@ L*n - D(= H)分進めたslow(H分進めたhead)が答えとなる。
 隣接した2つnodeを用意し、先頭から動かしていく。
 2つの要素の値が一致した時、左の要素の接続先を右の要素の一つ隣にくっつける。  
 - [自分の解答](./RemoveDuplicatesFromSortedList.cpp)
+
+# Remove Duplicates from Sorted List ii
+[問題](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)  
+
+## 問題訳
+要素が昇順の連結リストの先頭nodeが与えられる。要素の値に重複しないもののみを残した連結リストを返しなさい。
+
+##  解法 
+cur(cur == head), pre(pre->next == head) Nodeを用意する。  
+cur != cur->nextの時、prev->next = cur->nextとお
+一度、cur == cur->nextになったらprevを
+[解説](https://youtu.be/R6-PnHODewY)
+

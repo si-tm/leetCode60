@@ -1,6 +1,7 @@
 # leetCode60
+[参考](https://1kohei1.com/leetcode/)
 ## 問題
-- LinkedList
+- LinkedList [未](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)
 - Stack
 - Heap, PriorityQueue
 - HashMap
