@@ -19,9 +19,6 @@ public:
             if(tmp_index.first - 1 == tmp_index.first){
 
             }
-            else if(tmp_index.second - 1 == nums1.first){
-
-            }
         }
     }
 };
