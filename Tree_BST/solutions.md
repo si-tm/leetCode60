@@ -26,7 +26,8 @@
 2つのノードの合計値とした値のノードを作成しなさい。
 
 ## 解答
-
+- [自分の解答](./MergeTwoBinaryTrees.cpp)
+#
 # Convert Sorted Array to Binary Search Tree
 [問題](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
 ## 問題訳
@@ -35,6 +36,20 @@
 ## 解答
 中央値を取り、そこから左右交互に木にしていく → x  
 それぞれの右側と左側にソートされた配列の中間の値で区切ったものを次々と代入していく  
-[参考](https://qiita.com/KueharX/items/c7f88204cdba42144d9b)
+
+- [参考](https://qiita.com/KueharX/items/c7f88204cdba42144d9b)
+- [自分の解答](./ConvertSortedArraytoBinarySearchTree.cpp)
+
+# Path Sum
+[問題](https://leetcode.com/problems/path-sum/)
+## 問題訳
+root(二分木の根)と、targetSum(int型)が与えられます。  
+根から葉までの合計がtargetSumと等しくなるものがある場合true、そうでない場合falseを返しなさい  
+
+## 解答
+再帰していく
+
+- [自分の解答](./PathSum.cpp)
+
 
 
