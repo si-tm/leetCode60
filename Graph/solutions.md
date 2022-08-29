@@ -10,4 +10,9 @@ BFS?
 
 - [自分の解答](./NumberOfIslands.cpp)
 # 
-# 
+# Max Area of Island
+[問題](https://leetcode.com/problems/max-area-of-island/)
+## 問題訳
+m*nの01で構成されるグリッドが与えられる。
+島の面積の最大値を求めよ。
+ただし、1は陸、0は海である

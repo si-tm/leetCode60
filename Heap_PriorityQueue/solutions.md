@@ -50,7 +50,8 @@ addでは、追加後にk-1番目
 ## 解答
 1つずつ探す！  
 例  
-Input: nums1 = [1,1,2], nums2 = [1,2,3], k = 3  
-(0, 0)   
-(0, 1) or (1, 0) → (0, 1)  
-(0, 2) or (1, 1) → (1, 1)  
+Input: nums1 = [1,7,11], nums2 = [2,4,6], k = 3  
+Output: [[1,2],[1,4],[1,6]]  
+Explanation: The first 3 pairs are returned from the sequence: [1,2],[1,4],[1,6],[7,2],[7,4],[11,2],[7,6],[11,4],[11,6]   
+
+- [自分の解答](./FindKPairsWithSmallestSums.cpp)

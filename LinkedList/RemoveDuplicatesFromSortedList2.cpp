@@ -1,3 +1,9 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+typedef long long ll;
+#define rep(i,n) for(int i=0; i<(n); i++)
+const long long INF = numeric_limits<long long>::max();
 
  struct ListNode {
     int val;
@@ -10,18 +16,24 @@
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
-        if(head == nullptr) return head;
-        ListNode *pre, *cur = head;
-        pre = new ListNode(-1, head);
-        while(cur->next != nullptr){
-            if(cur->val == cur->next->val){
-                while(cur->val == cur->next->val && cur->next != nullptr) cur = cur->next;
-                pre->next = cur->next;
+        ListNode* dummy = new ListNode(0, head);
+        ListNode* prev = dummy;
+
+        while(head != nullptr){
+            if(head->next != nullptr && head->val == head->next->val){
+                while(head->next != nullptr && head->val == head->next->val){
+                    head = head->next;
+                }
+                cout << (head->next != nullptr) << endl;
+                prev->next = head->next;
             }
             else{
-                pre = pre->next;
+                prev = prev->next;
             }
-            cur = cur->next;
+            head = head->next;
         }
+
+        return dummy->next;
+
     }
-}
+};
