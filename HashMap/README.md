@@ -29,3 +29,15 @@ setにする
 ## 解答
 (例)  
 map['文字'] = その文字が単独かどうか
+
+
+#
+# Group Anagrams
+[問題](https://leetcode.com/problems/group-anagrams/)
+## 問題訳
+文字列の集合が与えられます。アナグラムのグループ分けをしてください。
+
+## 解答
+全てソートする。
+同じものを集合する。
+- [自分の解答](./GroupAnagrams.cpp)
