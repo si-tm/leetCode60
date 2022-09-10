@@ -41,3 +41,20 @@ map['文字'] = その文字が単独かどうか
 全てソートする。
 同じものを集合する。
 - [自分の解答](./GroupAnagrams.cpp)
+
+
+#
+# Subarray Sum Equals K
+[問題](https://leetcode.com/problems/subarray-sum-equals-k/)
+## 問題訳
+数列と数kが与えられます。合計値がkとなる部分列の個数を返しなさい。
+ただし、部分列は連続で、空列ではありません。
+
+## 制約
+- 1 <= nums.length <= 2*10^4
+- -1000 <= nums[i] <= 1000
+- -10^7 <= k <= 10^7
+## 解答
+累積和を作りながら、過去の合計値をさがす
+- [自分の解答](./SubarraySumEqualsK.cpp)
+
