@@ -48,7 +48,8 @@ addでは、追加後にk-1番目
 ここで、合計値が最小になるk個の(nums1の要素, nums2の要素)ペアを返しなさい。
 
 ## 解答
-1つずつ探す！  
+- [参考](https://www.tutorialspoint.com/find-k-pairs-with-smallest-sums-in-cplusplus)
+
 例  
 Input: nums1 = [1,7,11], nums2 = [2,4,6], k = 3  
 Output: [[1,2],[1,4],[1,6]]  

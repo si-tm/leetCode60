@@ -1,41 +1,37 @@
-#include <iostream>
-#include <vector>
-#include <map>
-#include <queue>
+#include <bits/stdc++.h>
+#include <stack>
 using namespace std;
-typedef long long ll;
-#define rep(i,n) for(int i=0; i<(n); i++)
-const long long INF = numeric_limits<long long>::max();
-
+struct Data{
+   int firstVal, secondVal, idx;
+   Data(int a, int b, int c){
+      firstVal = a;
+      secondVal = b;
+      idx = c;
+   }
+};
+struct Comparator{
+   bool operator()(Data a, Data b){
+      return !(a.firstVal + a.secondVal < b.firstVal + b.secondVal);
+   }
+};
 class Solution {
 public:
-    vector<vector<int>> kSmallestPairs(vector<int>& nums1, vector<int>& nums2, int k) {
-        vector<vector<int>> ans;
-        int s = nums1.size(), t = nums2.size();
-        int s_index = 0, t_index = 0;
-        for(int i = 0;i < min(k, s*t);i++){
-            vector<int> tmp;
-            if(i != 0 && s_index + 1 < s && t_index + 1 < t){
-                if(nums1[s_index + 1] + nums2[t_index] == nums1[s_index] + nums2[t_index + 1]){
-                    vector<int> tmp1;
-                    tmp1.push_back(nums1[s_index + 1]);
-                    tmp1.push_back(nums2[t_index]);
-                    ans.push_back(tmp1);
-                    i++;
-                    if(i >= min(k, s*t)) break;
-                    t_index++;
-                }
-                else if(nums1[s_index + 1] + nums2[t_index] < nums1[s_index] + nums2[t_index + 1]){
-                    s_index++;
-                }
-                else t_index++;
-            }
-            else if(s_index + 1 == s) t_index++;
-            else if(t_index + 1 == t) s_index++;
-            tmp.push_back(nums1[s_index]);
-            tmp.push_back(nums2[t_index]);
-            ans.push_back(tmp);
-        }
-        return ans;
-    }
+    vector<vector<int>> kSmallestPairs(vector<int>& nums1, vector<int>& nums2, int k) {     priority_queue <Data, vector <Data>, Comparator> pq;
+      int n = nums1.size();
+      int m = nums2.size();
+      if(!n || !m)return {};
+      vector < vector <int> > ret;
+      for(int i = 0; i < n; i++){
+         pq.push(Data(nums1[i], nums2[0], 0));
+      }
+      while(!pq.empty() && k--){
+         Data curr = pq.top();
+         pq.pop();
+         ret.push_back({curr.firstVal, curr.secondVal});
+         if(curr.idx + 1 < m){
+            pq.push(Data(curr.firstVal, nums2[curr.idx + 1], curr.idx + 1));
+         }
+      }
+      return ret;
+   }
 };
